@@ -22,7 +22,10 @@
             outline: inherit;
             border-radius: 7px;
             box-shadow: 0px 0px 0px #000;
-            flex-grow: 1; /* Make each button take equal space */
+            flex: 1 1 0; /* Make each button take equal space */
+            white-space: nowrap; /* Prevents button text from wrapping */
+            overflow: hidden;
+            text-overflow: ellipsis; /* Adds "..." if content overflows */
         }
 
         button:hover {
@@ -37,7 +40,7 @@
 </head>
 <body>
     <div class="button-container">
-        <button>Page 1</button>
+        <button>Page 1234321ddedadwedjewifewo</button>
         <button>Page 2</button>
         <button>Page 3</button>
         <button>Page 4</button>
