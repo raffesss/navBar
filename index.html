@@ -4,46 +4,63 @@
     <meta charset="UTF-8">
     <!-- Other meta tags... -->
     <style>
+        @font-face {
+            font-family: 'Gotham Rounded';
+            src: url(sources/GothamRounded-Light.woff) format('woff'), url(sources/GothamRounded-Light.woff2) format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
         .button-container {
             display: flex;
-            justify-content: space-between;
-            gap: 10px; /* Optional: adds some space between buttons */
+            justify-content: space-between; /* Distributes space evenly */
             width: 100%;
         }
         
-        button {
+        .button-container a {
             background: #05326e;
             color: white;
             border: none;
             padding: 10px;
-            font-family: "Oswald", sans-serif;
+            font-family: 'Gotham Rounded', sans-serif;
             font-size: 1.2rem;
+            text-align: center;
             cursor: pointer;
             outline: inherit;
             border-radius: 7px;
             box-shadow: 0px 0px 0px #000;
-            flex: 1 1 0; /* Make each button take equal space */
-            white-space: nowrap; /* Prevents button text from wrapping */
+            flex: 1; /* Each link takes equal space */
+            text-decoration: none; /* Removes underline */
+            white-space: nowrap; /* Prevents text from wrapping */
             overflow: hidden;
             text-overflow: ellipsis; /* Adds "..." if content overflows */
+            margin: 0 5px; /* Adds a small space between buttons */
         }
 
-        button:hover {
+        .button-container a:first-child {
+            margin-left: 0; /* Removes extra space on the left */
+        }
+
+        .button-container a:last-child {
+            margin-right: 0; /* Removes extra space on the right */
+        }
+
+        .button-container a:hover {
             filter: brightness(120%);
             box-shadow: 3px 3px 3px #000;
         }
 
-        button:active {
+        .button-container a:active {
             box-shadow: inset 2px 2px 10px #000;
         }
     </style>
 </head>
 <body>
     <div class="button-container">
-        <button>Page 1234321ddedadwedjewifewo</button>
-        <button>Page 2</button>
-        <button>Page 3</button>
-        <button>Page 4</button>
+        <a href="https://ramboll.sharepoint.com/sites/TechnicalExcellenceBridges-Int.development/SitePages/Project-References.aspx">Project References</a>
+        <a href="https://ramboll.sharepoint.com/sites/TechnicalExcellenceBridges-Int.development/SitePages/Expert-Search-Tool.aspx">Expert Search Tool</a>
+        <a href="#">Example#1</a>
+        <a href="#">Example#2</a>
     </div>
     <!-- The content of your page -->
 </body>
