@@ -1,17 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <!-- Other meta tags... -->
     <style>
-      
-    
-      /* Additional CSS style definitions */
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px; /* Optional: adds some space between buttons */
+            width: 100%;
+        }
+        
+        button {
+            background: #009df0;
+            color: white;
+            border: none;
+            padding: 8px;
+            font-family: "Oswald", sans-serif;
+            font-size: 1.2rem;
+            cursor: pointer;
+            outline: inherit;
+            border-radius: 15px;
+            box-shadow: 0px 0px 0px #000;
+            flex-grow: 1; /* Make each button take equal space */
+        }
+
+        button:hover {
+            filter: brightness(120%);
+            box-shadow: 3px 3px 3px #000;
+        }
+
+        button:active {
+            box-shadow: inset 2px 2px 10px #000;
+        }
     </style>
-    </head>
-    <body>
-        <button>page1</button>
-        <button>page2</button>
-        <button>page3</button>
-        <button>page4</button>
+</head>
+<body>
+    <div class="button-container">
+        <button>Page 1</button>
+        <button>Page 2</button>
+        <button>Page 3</button>
+        <button>Page 4</button>
+    </div>
     <!-- The content of your page -->
-    </body>
-    </html>
+</body>
+</html>
